@@ -1,0 +1,43 @@
+---
+title: "Real Income Distribution in Turkey"
+author: "Alper Duman"
+date: "4/24/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Introduction
+
+
+# Model
+
+These are annual income components of households in 2018.
+The weight corresponds to the survey weight of each household type.
+Thus the total annual income covered in the household survey in 2018 is merely 1212 billion TL.
+This is well below the disposable income derived from the national accounts; which is around 3000 billion TL
+
+The sources of this gap are (1) the gap in property income and (2) the gap in other income sources.
+Let's focus on the property income. 
+The sum of property income covered in the household survey is only 41.3 billion TL.
+However, the property income in OECD institutional sectors\footnote{The documentation for *OECD data* may be found at \url{https://stats.oecd.org/Index.aspx?DataSetCode=SNA_TABLE14A}}
+data is 464 billion TL.
+Thus there is a huge underreporting of top incomes.
+
+
+
+
+We take the unreported income, about 422 billion TL, and distribute that income equally to the top 10 percent
+of the households.
+Thus each of the top 2.4 million households in the population and correspondingly 2400 households in the 
+survey will increase their income by 176 thousand TL. 
+
+With the top income adjusted dataset we calculate the gini coefficient and find that  the real gini coefficient is 0.57 rather than the official 0.41.
+
+Next we will distribute the underreported income relying on a Pareto distribution among the top 10 income
+households.
+
+
